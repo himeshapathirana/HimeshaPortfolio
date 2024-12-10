@@ -1,0 +1,46 @@
+/* Footer Styles */
+.footer {
+    background-color: #FAF7F0; /* Light Background */
+    color: #4A4947; /* Dark Text Color */
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+  }
+  
+  .contact-info {
+    color: #B17457; /* Accent color */
+    font-weight: bold;
+  }
+  
+  .footer-links {
+    margin-top: 10px;
+  }
+  
+  .footer-links a {
+    color: #B17457; /* Accent Color for Links */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer a:active {
+    color: #D8D2C2; /* Lighter color when active */
+  }
+  
+  
