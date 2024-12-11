@@ -32,15 +32,20 @@ const Education = () => {
         </div>
 
         <div className="education-item">
-          <h2>GCE Advanced Level - Physical Science Stream</h2>
-          <h3>Badulla Central College</h3>
-          <p>2020</p>
-          <ul>
-            <li>Combined Maths - C</li>
-            <li>Physics - S</li>
-            <li>Chemistry - S</li>
-          </ul>
-        </div>
+  <h2 className="degree-title">GCE Advanced Level - Physical Science Stream</h2>
+  <h3 className="institution-name">Badulla Central College</h3>
+  <p className="graduation-year">2020</p>
+  
+  <div className="subjects">
+    <p><strong>Subjects:</strong></p>
+    <ul>
+      <li><strong>Combined Mathematics:</strong> C</li>
+      <li><strong>Physics:</strong> S</li>
+      <li><strong>Chemistry:</strong> S</li>
+    </ul>
+  </div>
+</div>
+
       </div>
     </div>
   );
