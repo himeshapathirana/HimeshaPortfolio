@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -b main -d dist",
     "start": "vite"
   },
