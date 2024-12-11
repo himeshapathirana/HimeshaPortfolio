@@ -1,0 +1,132 @@
+/* General Styles for Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 40px;
+    padding: 10px 20px;
+    background: rgba(138, 138, 138, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    transform: translateZ(0);
+    position: fixed;
+    perspective: 1000px;
+    top: 20px;
+    left: 0;
+  
+    z-index: 999;
+    width: 96%; /* Adjust for margins */
+}
+
+/* Adjust Body Padding for Fixed Navbar */
+body {
+    padding-top: 80px;
+}
+
+/* Navbar Menu Styles */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    font-size: 16px;
+    color: #D8D2C2;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Navbar Logo and Toggle Button */
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #D8D2C2;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Navbar Menu Item */
+.nav-menu li {
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.nav-menu li:hover {
+    color: #4A4947;
+    transform: translateY(-4px);
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Active Menu Item */
+.nav-menu li.active a {
+    color: #4A4947;
+    font-weight: 600;
+    border-bottom: 2px solid #4A4947;
+    text-decoration: none;
+}
+
+/* Navbar Connect Button */
+.nav-connect {
+    padding: 12px 30px;
+    border-radius: 25px;
+    background: #B17457;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.nav-connect:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #4A4947;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        margin: 10px 20px;
+        width: calc(100% - 40px);
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(138, 138, 138, 0.95);
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        gap: 15px;
+        
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-connect {
+        display: none;
+    }
+}

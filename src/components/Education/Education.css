@@ -1,0 +1,250 @@
+:root {
+    --primary-color: #4A4947;
+    --secondary-color: #B17457;
+    --background-color: #FAF7F0;
+    --text-color: #4A4947;
+    --accent-color: #D8D2C2;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.education {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.education::before {
+    content: '';
+    position: absolute;
+    top: -10vh;
+    right: -10vw;
+    width: 40vw;
+    height: 40vw;
+    background: linear-gradient(135deg, rgba(177, 116, 87, 0.1), rgba(216, 210, 194, 0.1));
+    border-radius: 50%;
+    z-index: 1;
+    animation: advanced-pulse 6s infinite alternate;
+}
+
+.education-title {
+    text-align: center;
+    font-size: 3.5rem; /* Matches the bold heading style */
+    font-weight: 800; /* Ensures a strong emphasis */
+    letter-spacing: 2px; /* Adds spacing between letters */
+    text-transform: uppercase; /* Makes the text uppercase */
+    margin-bottom: 3rem; /* Adds spacing below the title */
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Gradient with root colors */
+    -webkit-background-clip: text; /* Clips the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent for the gradient */
+    text-shadow: none; /* No shadow for a clean gradient look */
+    position: relative; /* Allows for animation adjustments */
+    opacity: 0; /* Initial opacity for animation */
+    transform: translateY(50px); /* Pre-animation transform */
+    animation: sophisticated-slide-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; /* Smooth animation */
+}
+
+
+.education-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: sophisticated-slide-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+}
+
+.education-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    width: 90%;
+    max-width: 1400px;
+    padding: 0;
+}
+
+.education-item {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px var(--shadow-color);
+    border: 1px solid rgba(177, 116, 87, 0.1);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px) rotateX(-10deg);
+    animation: advanced-card-reveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    backdrop-filter: blur(10px);
+    will-change: transform, box-shadow;
+}
+
+.education-item:hover {
+    transform: translateY(-15px) rotateX(0) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.education-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.education-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.education-item h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.education-item h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    animation: advanced-underline 1.2s ease-out forwards;
+}
+
+.education-item h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.education-item p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.education-item li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+    animation: advanced-list-reveal 0.8s ease-out forwards;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.education-item li:hover {
+    transform: translateX(10px);
+    color: var(--primary-color);
+}
+
+.education-item li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Advanced Animations */
+@keyframes sophisticated-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes advanced-card-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(50px) rotateX(-10deg) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0) scale(1);
+    }
+}
+
+@keyframes advanced-pulse {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.8;
+    }
+}
+
+@keyframes advanced-underline {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60px;
+    }
+}
+
+@keyframes advanced-list-reveal {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .education-section {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+
+    .education-title {
+        font-size: 2.5rem;
+    }
+
+    .education-item {
+        padding: 2rem;
+    }
+}
+
+/* Scroll Bar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
