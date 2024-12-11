@@ -39,9 +39,9 @@ const Education = () => {
   <div className="subjects">
     <p><strong>Subjects:</strong></p>
     <ul>
-      <li><strong>Combined Mathematics:</strong> C</li>
-      <li><strong>Physics:</strong> S</li>
-      <li><strong>Chemistry:</strong> S</li>
+      <li><strong>Combined Mathematics:Credit Pass</strong> (C)</li>
+      <li><strong>Physics:Ordinary Pass</strong> (S)</li>
+      <li><strong>Chemistry:Ordinary Pass</strong> (S)</li>
     </ul>
   </div>
 </div>
