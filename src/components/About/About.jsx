@@ -21,11 +21,11 @@ const About = () => {
         <div className="about-left">
           <div className="typing-text">
             <p>
-              I am a versatile software developer specializing in mobile application development, 
-              DevOps, and UI/UX design. As a Flutter Developer at DoNext, I focused on creating 
-              high-performance mobile applications using Flutter and Dart. My key responsibilities 
-              included developing intuitive user interfaces, managing CI/CD pipelines, and 
-              collaborating with cross-functional teams to deliver quality software solutions.
+             I am a versatile software developer specializing in mobile application development, 
+             DevOps, and UI/UX design. With hands-on experience as a Flutter Developer, 
+             I have focused on creating high-performance mobile applications using Flutter and Dart. 
+             My key responsibilities include developing intuitive user interfaces, managing CI/CD pipelines, 
+             and collaborating with cross-functional teams to deliver quality software solutions.  
             </p>
           </div>
         </div>

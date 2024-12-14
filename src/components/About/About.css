@@ -70,7 +70,9 @@ body {
   line-height: 1.8;
   color: var(--secondary-dark);
   font-family: 'Roboto Mono', monospace;
+  text-align: center;
 }
+
 
 .about-img {
   max-width: 350px;
